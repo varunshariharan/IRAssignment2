@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,12 +9,10 @@ import java.util.List;
  */
 public class IndexData {
     int documentFrequency;
-    int termFrequency;
-    List<Integer> documentList = new ArrayList<Integer>();
+    Map<Integer,Integer> termFrequencyMap = new HashMap<Integer, Integer>();
 
-    public IndexData(int documentFrequency, int termFrequency, List<Integer> documentList) {
+    public IndexData(int documentFrequency, Map<Integer, Integer> termFrequencyMap) {
         this.documentFrequency = documentFrequency;
-        this.termFrequency = termFrequency;
-        this.documentList = documentList;
+        this.termFrequencyMap = termFrequencyMap;
     }
 }
